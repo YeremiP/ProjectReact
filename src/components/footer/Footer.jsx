@@ -1,8 +1,9 @@
 import "./Footer.css";
-import { FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaInstagram, FaGithub, FaRss } from 'react-icons/fa';
 
 function Footer() {
   return(
+    
     <footer className="footer">
     <div className="footer-content">
       <div className="footer-section">
@@ -14,6 +15,8 @@ function Footer() {
         <ul>
           <li><a href="/Home">Inicio</a></li>
           <li><a href="/Gallery">Modelos</a></li>
+          <li><a href="/shoe-list">Reseñas</a></li>
+
         </ul>
       </div>
       <div className="footer-section">
@@ -24,6 +27,7 @@ function Footer() {
           <li><a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer"><FaTwitter/></a></li>
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagram/></a></li>
           <li><a href="https://github.com/YeremiP/ProjectReact" target="_blank" rel="noopener noreferrer"><FaGithub/></a></li>
+          <li><a href="/feed.xml"><FaRss/></a></li>
         </ul>
         </div>
       </div>

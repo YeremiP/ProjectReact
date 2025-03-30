@@ -19,6 +19,7 @@
 
 import { useState } from 'react';
 import './ShoesBrandList.css';
+import Logo from '../../components/shoes-brand-list/img/logo.png'; // Asegúrate de importar la imagen correctamente
 
 function ShoesBrandList() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,10 +37,13 @@ function ShoesBrandList() {
           <div className="hamburger" onClick={toggleMenu}>
             ☰
           </div>
+          {/* Logo */}
+          <img src={Logo} alt="Bambas Logo" className="logo" />
           {/* Lista de navegación */}
           <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/Gallery">Modelos</a></li>
+            <li><a href="/shoe-list">Reseñas</a></li>
           </ul>
         </nav>
       </header>
@@ -48,4 +52,5 @@ function ShoesBrandList() {
 }
 
 export default ShoesBrandList;
+
 

@@ -1,0 +1,276 @@
+/* ShoeList.css */
+
+/* Estilos generales */
+.shoe-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  display: flex;
+  margin: 0 auto 30px;
+  max-width: 600px;
+  position: relative;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #dfe6e9;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar input:focus {
+  border-color: #3498db;
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+  font-size: 18px;
+}
+
+/* Container de reseñas */
+.shoe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Tarjeta de reseña individual */
+.shoe-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ecf0f1;
+}
+
+.shoe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Encabezado de la reseña */
+.shoe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.shoe-title {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.4rem;
+}
+
+/* Contenido de la reseña */
+.shoe-details {
+  margin-bottom: 20px;
+}
+
+.shoe-detail {
+  display: flex;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #7f8c8d;
+  min-width: 80px;
+  margin-right: 10px;
+}
+
+.detail-value {
+  color: #34495e;
+}
+
+/* Valoración con estrellas */
+.shoe-rating {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.rating-stars {
+  display: flex;
+  margin-right: 10px;
+}
+
+.star-filled {
+  color: #f39c12;
+  margin-right: 3px;
+  font-size: 18px;
+}
+
+.star-empty {
+  color: #bdc3c7;
+  margin-right: 3px;
+  font-size: 18px;
+}
+
+.rating-value {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Acciones */
+.shoe-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.edit-icon, .delete-icon {
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.edit-icon {
+  color: #3498db;
+}
+
+.edit-icon:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+  transform: scale(1.1);
+}
+
+.delete-icon {
+  color: #e74c3c;
+}
+
+.delete-icon:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+  transform: scale(1.1);
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+form input, form select {
+  padding: 12px 15px;
+  border: 1px solid #dfe6e9;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+form input:focus, form select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button[type="submit"] {
+  background-color: #2ecc71;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+button[type="button"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button[type="button"]:hover {
+  background-color: #c0392b;
+}
+
+/* Mensaje cuando no hay zapatos */
+.no-shoes {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #7f8c8d;
+  padding: 40px 0;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shoe-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .shoe-container {
+    padding: 15px;
+  }
+  
+  .shoe-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .shoe-card {
+    padding: 20px;
+  }
+  
+  .search-bar input {
+    padding: 10px 15px;
+  }
+  
+  form {
+    padding: 15px;
+  }
+}
