@@ -35,11 +35,11 @@
 
 /* Estilo general para el header */
 #main-header .nav-bar {
-  background-color: #555555;
+  background-color: #55555500;
   color: #000;
   padding: 1em;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgb(0, 0, 0);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
   text-align: center;
   position: relative; /* Necesario para el menú hamburguesa */
 }
@@ -95,6 +95,20 @@
   gap: 15px;
 }
 
+.logo {
+  position: absolute;  
+  top: 10px;           
+  left: 10px;          
+  width: 80px;        
+  height: 80px;       
+  border-radius: 50%;  
+  object-fit: cover;   
+  z-index: 1000;       
+}
+
+
+
+
 @media screen and (max-width: 1200px) {
   /* Al reducir el tamaño de la pantalla, escondemos el menú y mostramos el icono de hamburguesa */
   .nav-bar ul {
@@ -103,7 +117,7 @@
     align-items: center;
     padding-top: 1em;
   }
-
+ 
   .hamburger {
     display: block; /* Mostramos el menú hamburguesa */
   }

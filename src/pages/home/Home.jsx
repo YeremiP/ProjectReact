@@ -2,7 +2,6 @@ import Maps from "../../components/maps/Maps";
 import "./Home.css";
 import Footer from "../../components/footer/Footer";
 import ShoesBrandList from "../../components/shoes-brand-list/ShoesBrandList";
-import Logo from "./img/logo.png";
 import ShoeCarousel from "../../components/shoe-carousel/ShoeCarousel";
 import bannerImage from "../../components/banner/img/nike-air-banner.jpg";
 import Banner from "../../components/banner/Banner";
@@ -10,8 +9,9 @@ import Banner from "../../components/banner/Banner";
 function Home() {
   return (
     <>
-      <img src={Logo} alt="Bambas Logo" className="logo" />
       <ShoesBrandList />
+      <br />
+      <br />
       <Banner
         image={bannerImage}
         title="Bienvenido a Nuestra Tienda de Bambas"
